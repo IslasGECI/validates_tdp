@@ -1,4 +1,4 @@
-Package: validates.tdp
+Package: validate.tdp
 Title: Data cleaning tools for tabular datapackage
 Authors@R: c(
     person(given = "Ciencia de Datos",
