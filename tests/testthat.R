@@ -1,3 +1,3 @@
 library(testthat)
-library(templater)
-test_check("templater")
+library(validates.tdp)
+test_check("validates.tdp")

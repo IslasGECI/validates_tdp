@@ -1,0 +1,11 @@
+Isla,Fecha,Transecto no.,Punto no.,Hora_inicio,Hora_final,Especie,# individuos ,Distancia (m),Aves >30 m,Tipo de Vegetación,Porcentaje_nubosidad,Velocidad_viento,Temperatura,Humedad,Observaciones
+Clarión,14/06/2022,1,1,08:00,08:20,Troglodytes tanneri,1,5,0,,60,,,,
+Clarión,13/06/2022,3,1,08:08,08:18,Corvus corax clarionensis,3,11,,,100,,,,
+Clarión,14/06/2022,8,2,09:17,09:27,Sula sula,1,NA,1,,85,0.6,23.6,80.7,
+Clarión,14/06/2022,10,1,08:00,08:10,Corvus corax clarionensis,1,NA,1,,60,,,,
+Clarión,16/06/2022,12,1,09:25,09:35,Corvus corax clarionensis,6,NA,1,,,,,,"se escuchan saltaparedes a la distanci, pero no se pueden ver. Parece que estan a 2 direcciones diferentes"
+Clarión,14/06/2022,14,1,08:00,08:10,Corvus corax clarionensis,1,25,,,50,,,,
+Clarión,13/10/2022,1,5,07:39,07:44,Corvus corax clarionensis,1,22,,,,,,,
+Clarión,15/10/2022,4,4,08:03,08:08,NA,0,0,,,,,,,
+Clarión,13/10/2022,9,4,08:10,08:15,Troglodytes tanneri,4,18,,Mixed scrub,,,,,
+Clarión,19/10/2022,12,2,07:58,08:03,Corvus corax clarionensis,1,19,0,,,,,,

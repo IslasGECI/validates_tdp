@@ -1,0 +1,6 @@
+Fecha,Manejador,Nombre_k9,ID_punto,Coordenada_Este,Coordenada_Norte,Altitud,Zona,Tipo_de_rastro,Clave_de_muestra,Sitio_o_lugar,Observaciones
+31/Ago/2022,Aldo,Maya,K9-MA-002-MD-TOSP,375944,3219679,NA,7,MD,NA,Zona 7,NA
+31/Ago/2022,Aldo,Maya,K9-MA-003-MD-TOSP,372399,3219497,NA,7,MD,NA,Zona 7,NA
+10/Oct/2022,Ivan,Thor,K9-TH-001-E2-GAFE,372710,3225587,1065,8,E2,NA,ANTENA NORTE,NA
+19/Oct/2022,Aldo,Gitana,K9-GI-001-E2-GAFE,373239,3216716,1092,6,E2,NA,Camara 29,NA
+19/Oct/2022,Aldo,Gitana,NA,373239,3216716,1092,6,E2,NA,Camara 29,NA

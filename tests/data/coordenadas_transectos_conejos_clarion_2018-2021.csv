@@ -1,0 +1,24 @@
+Isla,Area_isla,Temporada,Fecha,Nombre_transecto,Punto_del_transecto,Localidad,Coordenada_Este_inicio,Coordenada_Norte_inicio,Coordenada_Este_fin,Coordenada_Norte_fin,Longitud_inicio,Latitud_inicio,Longitud_fin,Latitud_fin,Longitud_transecto,Ancho_transecto,Observaciones,Track_GPS
+Clarión,19.8,2018,NA,1,NA,En las faldas del falso gallego en la parte oeste de la isla (no cerca de albatros),NA,NA,NA,NA,NA,NA,NA,NA,1000,Indefinido,NA,NA
+Clarión,19.8,2018,NA,2,NA,Subida del sector hacia la grabadora de bobos enmascarados,NA,NA,NA,NA,NA,NA,NA,NA,1000,Indefinido,NA,NA
+Clarión,19.8,2018,NA,3,NA,Transecto del sector hacia el lado oeste de la isla por el camino de la camioneta,NA,NA,NA,NA,NA,NA,NA,NA,1000,Indefinido,NA,NA
+Clarión,19.8,2018,NA,4,NA,Transecto en la costa frente/este al sector,NA,NA,NA,NA,NA,NA,NA,NA,1000,Indefinido,NA,NA
+Clarión,19.8,2018,NA,5,NA,Transecto primer campamento (Este Isla),NA,NA,NA,NA,NA,NA,NA,NA,1000,Indefinido,NA,NA
+Clarión,19.8,2018,NA,6,NA,Cerca de señuelos de albatros (Oeste isla),NA,NA,NA,NA,NA,NA,NA,NA,1000,Indefinido,NA,NA
+Clarión,19.8,2018,NA,7,NA,Planicie segundo campamento,NA,NA,NA,NA,NA,NA,NA,NA,1000,Indefinido,NA,NA
+Clarión,19.8,2021,09/Abr/2021,Conejos_01,NA,NA,737365,2030260,737438,2031252,-114.7538,18.34897,-114.753,18.35792,1000,Indefinido,Antes TRANCON 2,NA
+Clarión,19.8,2021,08/Abr/2021,Conejos_02,NA,NA,739246,2030167,738549,2030974,-114.736,18.34792,-114.7425,18.35528,1000,Indefinido,Antes TRANCON 1,NA
+Clarión,19.8,2021,26/Abr/2021,Conejos_03,NA,NA,739334,2030027,738273,2029931,-114.7352,18.34664,-114.7453,18.3459,1000,Indefinido,Antes CONEJOS 3,NA
+Clarión,19.8,2021,08/Abr/2021,Conejos_04,NA,NA,740035,2030345,740660,2029988,-114.7285,18.34944,-114.7227,18.34614,1000,Indefinido,Antes COST-CON-IN/FIN,NA
+Clarión,19.8,2021,14/Abr/2021,Conejos_05,NA,NA,742576,2031081,743396,2030690,-114.7044,18.3558,-114.6967,18.35217,1000,Indefinido,Antes TRANCON 3,NA
+Clarión,19.8,2021,09/Abr/2021,Conejos_06,NA,NA,736930,2030635,737256,2031610,-114.7579,18.3524,-114.7547,18.36117,1000,Indefinido,Antes CONEJOS 4-INIC/1000,NA
+Clarión,19.8,2021,12/Abr/2021,Conejos_07,NA,NA,741786,2031221,741928,2032206,-114.7119,18.35715,-114.7104,18.36603,1000,Indefinido,Antes CONEJOS 5,NA
+Clarión,19.8,2021,12/Abr/2021,Conejos_08,NA,NA,742216,2032163,742674,2031341,-114.7077,18.36561,-114.7035,18.35813,1000,Indefinido,Transecto Nuevo,Track 4
+Clarión,19.8,2021,27/Abr/2021,Conejos_09,NA,NA,740583,2030367,741408,2030934,-114.7234,18.34957,-114.7155,18.3546,NA,Indefinido,Transecto Nuevo,"Track 6 – originalmente pero no se pudo hacer ahí el transecto por el terreno, se movio a estos nuevos puntos."
+Clarión,19.8,2021,14/Abr/2021,Conejos_10,NA,NA,743697,2030529,744214,2031462,-114.6939,18.35068,-114.6889,18.35905,1000,Indefinido,Transecto Nuevo,Track 5
+Clarión,19.8,2021,19/Abr/2021,Conejos_11,1,NA,738765,2032716,NA,NA,-114.7403,18.37099,NA,NA,1000,Indefinido,Transecto Nuevo/3 PUNTOS POR QUE EL TRANSECTO NO FUE RECTO,Track 001
+Clarión,19.8,2021,19/Abr/2021,Conejos_11,2,NA,738891,2032098,NA,NA,-114.7392,18.3654,NA,NA,1000,Indefinido,Coordenada a la mitad del transecto; 500 m,NA
+Clarión,19.8,2021,19/Abr/2021,Conejos_11,3,NA,739249,2032197,NA,NA,-114.7358,18.36625,NA,NA,1000,Indefinido,TCoordenada al final del transecto; 500 m,NA
+Clarión,19.8,2021,19/Abr/2021,Conejos_12,NA,NA,739822,2032107,740785,2031994,-114.7304,18.36537,-114.7213,18.36424,1000,Indefinido,Transecto Nuevo,Track 2
+Clarión,19.8,2021,22/Abr/2021,Conejos_13,NA,NA,740238,2031220,739252,2031379,-114.7265,18.35732,-114.7358,18.35886,1000,Indefinido,Transecto Nuevo,Track 3
+Clarión,19.8,2021,22/Abr/2021,Conejos_14,NA,NA,737340,2031729,738240,2031381,-114.7539,18.36224,-114.7454,18.35899,1000,Indefinido,Transecto Nuevo,Track
