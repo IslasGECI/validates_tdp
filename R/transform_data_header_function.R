@@ -1,4 +1,3 @@
-#' @import data.table
 #' @import lubridate
 #' @import stringr
 
@@ -11,7 +10,7 @@ transform_data_header <- function(csv_data) {
     tmp_date <- append(tmp_date, paste("Fecha", i, sep = "_"))
     real_date <- append(real_date, dates[i])
   }
-  dates_table <- data.frame(
+  dates_table <- tibble::tibble(
     "tmp_date" = tmp_date,
     "real_date" = real_date
   )

@@ -2,10 +2,10 @@ library(testthat)
 library(tidyverse)
 
 
-file_tests <- "/workdir/tests/data_tests/IG_POSICION_TRAMPAS_30AGO2020.csv"
-data_tests <- fread(file_tests, drop = c(1:4))
+file_tests <- "/workdir/tests/data/IG_POSICION_TRAMPAS_30AGO2020.csv"
+data_tests <- data.table::fread(file_tests, drop = c(1:4))
 
-output_tests <- data.frame(
+output_tests <- tibble(
   "tmp_date" = c(
     "Fecha_1", "Fecha_2", "Fecha_3", "Fecha_4", "Fecha_5", "Fecha_6", "Fecha_7"
   ),
@@ -47,7 +47,7 @@ test_that("Prueba cambio de formato en fecha", {
 
 test_that("Concatena columnas con y sin fecha", {
   setwd("/workdir")
-  filename <- "tests/data_tests/wrong_dates.csv"
+  filename <- "tests/data/wrong_dates.csv"
   table_with_wrong_column_names <- read_csv(filename, show_col_types = FALSE)
   table_with_corret_column_names <- fix_date_format_in_column_names(table_with_wrong_column_names)
   obtained_columnames <- colnames(table_with_corret_column_names)
