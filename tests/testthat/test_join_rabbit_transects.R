@@ -21,6 +21,16 @@ describe("Write joined tables", {
     write_transect_and_coordinates_table(output_path, id_start, transect_path_tecolotes, coordinates_path_tecolotes, species)
     expect_true(testtools::exist_output_file(output_path))
   })
+  it("Write joined table for Aves", {
+    coordinates_path_aves <- "../data/transectos_isla_clarion.csv"
+    transect_path_aves <- "../data/aves_2022.csv"
+    output_path <- "../data/joined_aves_table.csv"
+    testtools::delete_output_file(output_path)
+    id_start <- 679
+    species <- "Aves"
+    write_transect_and_coordinates_table(output_path, id_start, transect_path_aves, coordinates_path_aves, species)
+    expect_true(testtools::exist_output_file(output_path))
+  })
 })
 describe(
   "Join tables",
