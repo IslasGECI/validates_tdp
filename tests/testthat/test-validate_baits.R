@@ -6,9 +6,7 @@ describe("Check baits", {
     obtained_rows <- nrow(obtained)
     expected_rows <- 1
     expect_equal(obtained_rows, expected_rows)
-  })
-  it("check baits", {
-    expect_error(check_baits(ig_posicion), "🚨 We have more than one bait per line")
+    expect_error(get_line_and_baits(ig_posicion), "🚨 We have more than one bait per line")
   })
   it("Select columns of interest", {
     obtained <- get_line_and_atrayente(ig_posicion)
