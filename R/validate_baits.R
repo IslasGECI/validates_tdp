@@ -1,4 +1,4 @@
-validate_unique_bait_per_line <- function(lines_baits) {
+is_there_an_unique_bait_per_line <- function(lines_baits) {
   number_of_lines <- lines_baits$Linea |>
     unique() |>
     length()
