@@ -10,5 +10,8 @@ describe("Check baits", {
     correct_ig_posicion <- tibble::tibble(Linea = rep("Linea 146", 3), Atrayente = rep("Cebada con cebo", 3))
     obtained <- is_there_an_unique_bait_per_line(correct_ig_posicion)
     expect_true(obtained)
+    wrong_ig_posicion <- tibble::tibble(Linea = rep("Linea 146", 3), Atrayente = c("Cebada con cebo", "Cebada con cebo", "cebo"))
+    obtained <- is_there_an_unique_bait_per_line(wrong_ig_posicion)
+    expect_false(obtained)
   })
 })
