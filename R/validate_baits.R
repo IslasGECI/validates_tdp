@@ -1,7 +1,7 @@
 check_baits <- function(ig_posicion) {
   lines_baits <- get_line_and_atrayente(ig_posicion)
   if (!is_there_an_unique_bait_per_line(lines_baits)) {
-    stop(glue::glue("more than one bait per line"))
+    stop(glue::glue("🚨 We have more than one bait per line"))
   }
 }
 

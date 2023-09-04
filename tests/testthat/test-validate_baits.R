@@ -1,7 +1,7 @@
 describe("Check baits", {
   ig_posicion <- readr::read_csv("/workdir/tests/data/IG_POSICION_TRAMPAS_03SEP2023.csv", show_col_types = FALSE)
   it("check baits", {
-    expect_error(check_baits(ig_posicion), "more than one bait per line")
+    expect_error(check_baits(ig_posicion), "🚨 We have more than one bait per line")
   })
   it("Select columns of interest", {
     obtained <- get_line_and_atrayente(ig_posicion)
