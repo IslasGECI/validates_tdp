@@ -1,5 +1,6 @@
 get_line_and_baits <- function(ig_posicion) {
-  check_baits(ig_posicion)
+  lines_baits <- get_line_and_atrayente(ig_posicion)
+  check_baits(lines_baits)
   get_line_and_atrayente(ig_posicion) |>
     unique()
 }
