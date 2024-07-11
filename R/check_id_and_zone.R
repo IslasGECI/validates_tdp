@@ -4,11 +4,18 @@ check_id_and_zones_guadalupe <- function(cameras_path) {
 }
 
 stop_if_id_zone_and_zone_column_are_wrong <- function(cameras_data) {
-  id_column_name <- "ID_camara_trampa"
-  variable <- "Zona"
-  no_equal_indexes <- get_wrong_row_id_and_variable_column(cameras_data, id_column_name, variable)
-  message_for_id_and_zones <- "have different zones in ID"
-  stop_with_message(no_equal_indexes, message_for_id_and_zones)
+  config <- list(
+    id_column_name = "ID_camara_trampa",
+    variable = "Zona",
+    message_for_id_and_zones = "have different zones in ID"
+  )
+  no_equal_indexes <- get_wrong_row_id_and_variable_column(cameras_data, config$id_column_name, config$variable)
+  stop_with_message(no_equal_indexes, config$message_for_id_and_zones)
+}
+
+stop_if_variable_in_id_and_variable_column_are_wrong <- function(cameras_data, config) {
+  no_equal_indexes <- get_wrong_row_id_and_variable_column(cameras_data, config$id_column_name, config$variable)
+  stop_with_message(no_equal_indexes, config$message_for_id_and_zones)
 }
 
 get_wrong_row_id_and_variable_column <- function(cameras_data, id_column_name, variable) {
