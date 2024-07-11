@@ -5,7 +5,7 @@ split_id <- function(id_punto) {
   stringr::str_split(id_punto, "-")[[1]]
 }
 
-check_trace_from_id <- function(dataframe) {
+stop_if_id_trace_and_trace_column_are_wrong <- function(dataframe) {
   trace_from_id <- get_trace_from_id(dataframe)
   traces <- dataframe$Tipo_de_rastro
   no_equal_indexes <- which(trace_from_id != traces)
@@ -21,5 +21,5 @@ get_trace_from_id <- function(dataframe) {
 #' @export
 check_traces <- function(k9_traces_path = "data/esfuerzos_k9_gatos_guadalupe/registros_rastros_de_gatos_k9_guadalupe.csv") {
   data_traces <- readr::read_csv(k9_traces_path, show_col_types = FALSE)
-  check_trace_from_id(data_traces)
+  stop_if_id_trace_and_trace_column_are_wrong(data_traces)
 }
