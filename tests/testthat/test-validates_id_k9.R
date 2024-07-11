@@ -20,6 +20,6 @@ describe("Check column ID_punt", {
     k9_traces_error_path <- "../data/registros_rastros_k9_guadalupe.csv"
     k9_traces_clean_path <- "../data/registros_rastros_k9_clean_id.csv"
     expect_no_error(check_traces(k9_traces_clean_path))
-    expect_error(check_traces(k9_traces_error_path), "🚨 Rows 5, 7 and 14 have different traces")
+    expect_error(check_traces(k9_traces_error_path), "🚨 Rows 5, 7, and 14 have different traces")
   })
 })
