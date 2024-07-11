@@ -9,8 +9,7 @@ stop_if_id_zone_and_zone_column_are_wrong <- function(cameras_data) {
     variable = "Zona",
     message_for_id_and_zones = "have different zones in ID"
   )
-  no_equal_indexes <- get_wrong_row_id_and_variable_column(cameras_data, config$id_column_name, config$variable)
-  stop_with_message(no_equal_indexes, config$message_for_id_and_zones)
+  stop_if_variable_in_id_and_variable_column_are_wrong(cameras_data, config)
 }
 
 stop_if_variable_in_id_and_variable_column_are_wrong <- function(cameras_data, config) {
