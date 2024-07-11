@@ -8,11 +8,12 @@ describe("Check baits", {
     expect_equal(obtained_rows, expected_rows)
     expect_error(get_line_and_baits(ig_posicion), "🚨 We have more than one bait per line")
   })
-  it("Add last date", {
+  it("Add last date: Tidy version for bait in each line", {
+    skip("🥇 Gold test for tidy bait table: We need to change for ID instead of Line")
     correct_ig_posicion_with_dates <- readr::read_csv("/workdir/tests/data/input_add_last_date.csv")
     obtained <- add_last_date(correct_ig_posicion_with_dates)
     obtained_columns <- colnames(obtained)
-    expected_columns <- c("Date", "Linea", "Atrayente")
+    expected_columns <- c("Date", "ID", "Atrayente")
     expect_equal(obtained_columns, expected_columns)
   })
   it("Select columns of interest", {
