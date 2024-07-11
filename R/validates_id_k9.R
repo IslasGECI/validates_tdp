@@ -8,9 +8,7 @@ split_id <- function(id_punto) {
 stop_if_id_trace_and_trace_column_are_wrong <- function(dataframe) {
   id_column_name <- "ID_punto"
   variable <- "Tipo_de_rastro"
-  trace_from_id <- get_trace_from_id(dataframe, id_column_name)
-  traces <- dataframe[[variable]]
-  no_equal_indexes <- which(trace_from_id != traces)
+  no_equal_indexes <- get_wrong_row_id_and_variable_column(dataframe, id_column_name, variable)
   message_for_traces <- "have different traces"
   stop_with_message(no_equal_indexes, message_for_traces)
 }
