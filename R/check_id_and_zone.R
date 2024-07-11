@@ -1,6 +1,11 @@
 check_id_and_zones_guadalupe <- function(cameras_path) {
   cameras_data <- readr::read_csv(cameras_path, show_col_types = FALSE)
-  stop_if_id_zone_and_zone_column_are_wrong(cameras_data)
+  config <- list(
+    id_column_name = "ID_camara_trampa",
+    variable = "Zona",
+    message_for_id_and_zones = "have different zones in ID"
+  )
+  stop_if_variable_in_id_and_variable_column_are_wrong(cameras_data, config)
 }
 
 stop_if_id_zone_and_zone_column_are_wrong <- function(cameras_data) {
