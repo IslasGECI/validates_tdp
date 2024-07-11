@@ -3,6 +3,10 @@ check_id_and_zones_guadalupe <- function(cameras_path) {
   id_column_name <- "ID_camara_trampa"
   zones_from_id <- get_zones_from_id(cameras_data, id_column_name)
   no_equal_indexes <- which(zones_from_id != cameras_data$Zona)
+  stop_with_message(no_equal_indexes)
+}
+
+stop_with_message <- function(no_equal_indexes) {
   is_different <- length(no_equal_indexes) > 0
   if (is_different) {
     different_rows <- glue::glue_collapse(no_equal_indexes, ", ", last = ", and ")
