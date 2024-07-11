@@ -6,13 +6,12 @@ check_id_and_zones_guadalupe <- function(cameras_path) {
 stop_if_id_zone_and_zone_column_are_wrong <- function(cameras_data) {
   id_column_name <- "ID_camara_trampa"
   variable <- "Zona"
-  no_equal_indexes <- get_wrong_row_in_id_zone_and_zone_column_are_wrong(cameras_data, variable)
+  no_equal_indexes <- get_wrong_row_id_and_variable_column(cameras_data, id_column_name, variable)
   message_for_id_and_zones <- "have different zones in ID"
   stop_with_message(no_equal_indexes, message_for_id_and_zones)
 }
 
-get_wrong_row_in_id_zone_and_zone_column_are_wrong <- function(cameras_data, variable) {
-  id_column_name <- "ID_camara_trampa"
+get_wrong_row_id_and_variable_column <- function(cameras_data, id_column_name, variable) {
   zones_from_id <- get_zones_from_id(cameras_data, id_column_name)
   zonas <- cameras_data[[variable]]
   no_equal_indexes <- which(zones_from_id != zonas)
