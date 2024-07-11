@@ -1,9 +1,9 @@
 check_id_and_zones_guadalupe <- function(cameras_path) {
   cameras_data <- readr::read_csv(cameras_path, show_col_types = FALSE)
-  stop_if_id_camaras_are_wrong(cameras_data)
+  stop_if_id_zone_and_zone_column_are_wrong(cameras_data)
 }
 
-stop_if_id_camaras_are_wrong <- function(cameras_data) {
+stop_if_id_zone_and_zone_column_are_wrong <- function(cameras_data) {
   id_column_name <- "ID_camara_trampa"
   zones_from_id <- get_zones_from_id(cameras_data, id_column_name)
   no_equal_indexes <- which(zones_from_id != cameras_data$Zona)
