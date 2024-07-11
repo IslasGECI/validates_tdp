@@ -11,8 +11,9 @@ check_trace_from_id <- function(dataframe) {
   splited_ids <- sapply(dataframe$ID_punto, split_id, simplify = FALSE, USE.NAMES = FALSE)
   trace_from_id <- sapply(splited_ids, `[[`, 4)
   traces <- dataframe$Tipo_de_rastro
-  different_rows <- glue::glue_collapse(which(trace_from_id != traces), ", ", last = " and ")
-  is_different <- length(different_rows) > 0
+  no_equal_indexes <- which(trace_from_id != traces)
+  different_rows <- glue::glue_collapse(no_equal_indexes, ", ", last = " and ")
+  is_different <- length(no_equal_indexes) > 0
   if (is_different) {
     stop(glue::glue("🚨 Rows {different_rows} have different traces"))
   }
