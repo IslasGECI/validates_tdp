@@ -6,12 +6,16 @@ split_id <- function(id_punto) {
 }
 
 check_trace_from_id <- function(dataframe) {
-  splited_ids <- sapply(dataframe$ID_punto, split_id, simplify = FALSE, USE.NAMES = FALSE)
-  trace_from_id <- sapply(splited_ids, `[[`, 4)
+  trace_from_id <- get_trace_from_id(dataframe)
   traces <- dataframe$Tipo_de_rastro
   no_equal_indexes <- which(trace_from_id != traces)
   message_for_traces <- "have different traces"
   stop_with_message(no_equal_indexes, message_for_traces)
+}
+
+get_trace_from_id <- function(dataframe) {
+  splited_ids <- sapply(dataframe$ID_punto, split_id, simplify = FALSE, USE.NAMES = FALSE)
+  sapply(splited_ids, `[[`, 4)
 }
 
 #' @export
