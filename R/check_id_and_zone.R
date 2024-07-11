@@ -12,11 +12,11 @@ stop_if_id_zone_and_zone_column_are_wrong <- function(cameras_data) {
 }
 
 get_wrong_row_id_and_variable_column <- function(cameras_data, id_column_name, variable) {
-  zones_from_id <- get_zones_from_id(cameras_data, id_column_name)
+  get_variables_from_id <- list("Zona" = get_zones_from_id, "Tipo_de_rastro" = get_trace_from_id)
+  zones_from_id <- get_variables_from_id[[variable]](cameras_data, id_column_name)
   zonas <- cameras_data[[variable]]
   no_equal_indexes <- which(zones_from_id != zonas)
 }
-
 stop_with_message <- function(no_equal_indexes, message_string) {
   is_different <- length(no_equal_indexes) > 0
   if (is_different) {
