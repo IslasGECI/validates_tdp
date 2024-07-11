@@ -21,5 +21,10 @@ get_trace_from_id <- function(dataframe, id_column_name) {
 #' @export
 check_traces <- function(k9_traces_path = "data/esfuerzos_k9_gatos_guadalupe/registros_rastros_de_gatos_k9_guadalupe.csv") {
   data_traces <- readr::read_csv(k9_traces_path, show_col_types = FALSE)
-  stop_if_id_trace_and_trace_column_are_wrong(data_traces)
+  config <- list(
+    id_column_name = "ID_punto",
+    variable = "Tipo_de_rastro",
+    message_for_id_and_zones = "have different traces"
+  )
+  stop_if_variable_in_id_and_variable_column_are_wrong(data_traces, config)
 }
