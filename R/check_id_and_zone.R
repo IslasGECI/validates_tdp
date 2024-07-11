@@ -1,5 +1,13 @@
+check_id_and_zones_guadalupe <- function(cameras_path) {
+  cameras_data <- readr::read_csv(cameras_path, show_col_types = FALSE)
+  if (!is_id_consistent_with_zone(cameras_data, "ID_camara_trampa")) {
+    return("error")
+  }
+  return("no error")
+}
+
 is_id_consistent_with_zone <- function(camaras_trampa, id_column_name) {
-  zones_from_id <- strtoi(str_match(camaras_trampa[[id_column_name]], "-0([1-8])-")[, 2])
+  zones_from_id <- strtoi(stringr::str_match(camaras_trampa[[id_column_name]], "-0([1-8])-")[, 2])
   is_each_id_consistent_with_zone <- zones_from_id == camaras_trampa$Zona
   return(all(is_each_id_consistent_with_zone))
 }
