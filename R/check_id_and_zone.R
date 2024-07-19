@@ -28,12 +28,6 @@ stop_with_message <- function(no_equal_indexes, message_string) {
   }
 }
 
-is_id_consistent_with_zone <- function(camaras_trampa, id_column_name) {
-  zones_from_id <- get_zones_from_id(camaras_trampa, id_column_name)
-  is_each_id_consistent_with_zone <- zones_from_id == camaras_trampa$Zona
-  return(all(is_each_id_consistent_with_zone))
-}
-
 get_zones_from_id <- function(camaras_trampa, id_column_name) {
   matchs <- stringr::str_match(camaras_trampa[[id_column_name]], "-(0[1-8]|[1-7]0)-")
   return(as.integer(matchs[, 2]))
