@@ -11,4 +11,17 @@ describe("ID is consisitent with zone", {
     obtained <- is_id_consistent_with_zone(correct_traps, id_column)
     expect_true(obtained)
   })
+  it("Get zone number from id", {
+    id_column_name <- "ID_guadalupe"
+    camaras_trampa <- tibble::tibble(ID_guadalupe = c("XX-01-XXXX-XX", "XX-03-XXXX-XX", "XX-08-XXXX-XX"))
+    obtained <- get_zones_from_id(camaras_trampa, id_column_name)
+    expected <- c(1, 3, 8)
+    expect_equal(obtained, expected)
+
+    id_column_name <- "ID_socorro"
+    camaras_trampa <- tibble::tibble(ID_socorro = c("XX-10-XXXX-XX", "XX-30-XXXX-XX", "XX-08-XXXX-XX"))
+    obtained <- get_zones_from_id(camaras_trampa, id_column_name)
+    expected <- c(10, 30, 8)
+    expect_equal(obtained, expected)
+  })
 })
