@@ -23,7 +23,6 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-    - name: Tag Docker image
     - name: Sube latest a Docker Hub
       run: docker push islasgeci/validate_tdp:latest
     - name: Sube sha a Docker Hub
