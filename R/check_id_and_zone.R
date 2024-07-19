@@ -35,5 +35,7 @@ is_id_consistent_with_zone <- function(camaras_trampa, id_column_name) {
 }
 
 get_zones_from_id <- function(camaras_trampa, id_column_name) {
-  strtoi(stringr::str_match(camaras_trampa[[id_column_name]], "-0([1-8])-")[, 2])
+  matchs <- stringr::str_match(camaras_trampa[[id_column_name]], "-((0([1-8])|([1-7])0))-")
+  print(matchs)
+  return(as.integer(matchs[, 2]))
 }
