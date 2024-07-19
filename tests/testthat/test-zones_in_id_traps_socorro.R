@@ -21,7 +21,6 @@ describe("ID is consisitent with zone", {
     id_column_name <- "ID_socorro"
     camaras_trampa <- tibble::tibble(ID_socorro = c("XX-10-XXXX-XX", "XX-30-XXXX-XX", "XX-08-XXXX-XX"))
     obtained <- get_zones_from_id(camaras_trampa, id_column_name)
-    print(obtained)
     expected <- c(10, 30, 8)
     expect_equal(obtained, expected)
   })
