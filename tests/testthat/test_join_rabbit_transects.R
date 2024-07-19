@@ -1,7 +1,7 @@
 transect_path <- "../data/conejos_clarion.csv"
-transects_data <- read_csv(transect_path, show_col_types = FALSE)
+transects_data <- readr::read_csv(transect_path, show_col_types = FALSE)
 coordinates_path <- "../data/coordenadas_transectos_conejos_clarion_2018-2021.csv"
-coordinates_data <- read_csv(coordinates_path, show_col_types = FALSE)
+coordinates_data <- readr::read_csv(coordinates_path, show_col_types = FALSE)
 
 coordinates_path_tecolotes <- "../data/transectos_isla_clarion.csv"
 transect_path_tecolotes <- "../data/tecolotes_clarion.csv"
@@ -63,8 +63,8 @@ describe(
     })
     it("Check tecolotes table structure", {
       species <- "Tecolotes"
-      transects_data_tecolotes <- read_csv(transect_path_tecolotes, show_col_types = FALSE)
-      coordinates_data_tecolotes <- read_csv(coordinates_path_tecolotes, show_col_types = FALSE)
+      transects_data_tecolotes <- readr::read_csv(transect_path_tecolotes, show_col_types = FALSE)
+      coordinates_data_tecolotes <- readr::read_csv(coordinates_path_tecolotes, show_col_types = FALSE)
       obtained <- join_coordinates_and_transects(transects_data_tecolotes, coordinates_data_tecolotes, species = species)
       obtained_columns <- colnames(obtained)
       expected_columns <- c(
@@ -92,9 +92,9 @@ describe(
     it("Check bird table contents", {
       species <- "Aves"
       transect_path_birds <- "../data/aves_2022.csv"
-      transect_data_birds <- read_csv(transect_path_birds, show_col_types = FALSE)
+      transect_data_birds <- readr::read_csv(transect_path_birds, show_col_types = FALSE)
       expected_transect_points <- transect_data_birds[["Punto no."]]
-      coordinates_data_birds <- read_csv(coordinates_path_tecolotes, show_col_types = FALSE)
+      coordinates_data_birds <- readr::read_csv(coordinates_path_tecolotes, show_col_types = FALSE)
       obtained <- join_coordinates_and_transects(transect_data_birds, coordinates_data_birds, species = species)
       obtained_transect_points <- obtained$Punto_del_transecto
       expect_equal(obtained_transect_points, expected_transect_points)
@@ -140,7 +140,7 @@ describe("Prepare cooridinates data", {
       "Longitud",
       "Punto_del_transecto"
     )
-    coordinates_data <- read_csv(coordinates_path_tecolotes, show_col_types = FALSE)
+    coordinates_data <- readr::read_csv(coordinates_path_tecolotes, show_col_types = FALSE)
     species <- "Tecolotes"
     obtained <- process_coordinates_data(coordinates_data, species)
     obtained_columns <- colnames(obtained)

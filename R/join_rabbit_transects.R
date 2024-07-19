@@ -2,10 +2,10 @@
 
 #' @export
 write_transect_and_coordinates_table <- function(output_path, id_start, transect_path, coordinates_path, species = "Conejos") {
-  transects_data <- read_csv(transect_path, show_col_types = FALSE)
-  coordinates_data <- read_csv(coordinates_path, show_col_types = FALSE)
+  transects_data <- readr::read_csv(transect_path, show_col_types = FALSE)
+  coordinates_data <- readr::read_csv(coordinates_path, show_col_types = FALSE)
   joined_data <- join_coordinates_and_transects(transects_data, coordinates_data, id_start, species)
-  write_csv(joined_data, output_path)
+  readr::write_csv(joined_data, output_path)
 }
 
 join_coordinates_and_transects <- function(transects_data, coordinates_data, id_start = 1, species = "Conejos") {
