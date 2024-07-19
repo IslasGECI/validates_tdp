@@ -9,9 +9,9 @@ jobs:
     - name: Construye imagen
       run: docker build --tag islasgeci/validate_tdp:latest --tag islasgeci/validate_tdp:${GITHUB_SHA:0:4} .
     - name: Verifica el formato
-      run: docker run islasgeci make check
+      run: docker run islasgeci/validate_tdp:latest make check
     - name: Corre pruebas y evalúa cobertura
-      run: docker run islasgeci make coverage
+      run: docker run islasgeci/validate_tdp:latest make coverage
     - name: Create/Update tag
       uses: rickstaa/action-create-tag@v1.5.4
       with:
