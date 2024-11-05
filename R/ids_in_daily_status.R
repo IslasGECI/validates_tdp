@@ -6,12 +6,13 @@ check_all_ids_in_list_are_in_daily_status <- function(daily_status_path, traps_l
 }
 
 should_stop <- function(are_all_ids) {
-  if (!are_all_ids) {
+  if (!are_all_ids$is_right) {
     stop()
   }
 }
 
 
 .are_all_ids <- function(traps_list, daily_status) {
-  all(traps_list$ID %in% daily_status$ID_de_trampa)
+  are_all_ids <- list(is_right = all(traps_list$ID %in% daily_status$ID_de_trampa))
+  return(are_all_ids)
 }
