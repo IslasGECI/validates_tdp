@@ -17,7 +17,11 @@ should_stop <- function(are_all_ids) {
 
 .are_all_ids <- function(traps_list, daily_status) {
   are_all_ids <- list(is_right = all(traps_list$ID %in% daily_status$ID_de_trampa))
-  are_all_ids$extra_ids <- traps_list |>
-    filter(!ID %in% daily_status$ID_de_trampa)
+  are_all_ids$extra_ids <- .extract_extra_ids(traps_list, daily_status)
   return(are_all_ids)
+}
+
+.extract_extra_ids <- function(traps_list, daily_status) {
+  traps_list |>
+    filter(!ID %in% daily_status$ID_de_trampa)
 }
