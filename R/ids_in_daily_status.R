@@ -7,7 +7,7 @@ check_all_ids_in_list_are_in_daily_status <- function(daily_status_path, traps_l
 
 should_stop <- function(are_all_ids) {
   if (!are_all_ids$is_right) {
-    extra_ids <- glue::glue_collapse(are_all_ids$extra_ids$ID, ", ", last = ", and ")
+    extra_ids <- glue::glue_collapse(are_all_ids$extra_ids, ", ", last = ", and ")
     message_extras <- glue::glue("🚨 ID not present in daily status table: {extra_ids}")
     stop(message_extras)
   }
@@ -22,5 +22,6 @@ should_stop <- function(are_all_ids) {
 
 .extract_extra_ids <- function(traps_list, condition) {
   traps_list |>
-    filter(!condition)
+    filter(!condition) |>
+    pull(ID)
 }
