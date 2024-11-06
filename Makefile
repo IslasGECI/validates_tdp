@@ -22,7 +22,7 @@ check:
       | grep FALSE
 
 check_all_ids_in_list_are_in_daily_status_guadalupe:
-	Rscript -e "validate.tdp::check_all_ids_in_list_are_in_daily_status('trap_daily_status.csv', 'traps_ids.csv')"
+	Rscript -e "validate.tdp::check_all_ids_in_list_are_in_daily_status('data/trap_daily_status.csv', 'data/traps_ids.csv')"
 
 clean:
 	rm --force *.tar.gz
