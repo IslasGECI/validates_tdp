@@ -1,6 +1,7 @@
+#' @export
 check_all_ids_in_list_are_in_daily_status <- function(daily_status_path, traps_list_path) {
-  daily_status <- readr::read_csv(daily_status_path)
-  traps_list <- readr::read_csv(traps_list_path)
+  daily_status <- readr::read_csv(daily_status_path, show_col_types = FALSE)
+  traps_list <- readr::read_csv(traps_list_path, show_col_types = FALSE)
   are_all_ids <- .are_all_ids_in_use(traps_list, daily_status)
   should_stop(are_all_ids)
 }

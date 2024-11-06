@@ -8,14 +8,14 @@ transect_path_tecolotes <- "../data/tecolotes_clarion.csv"
 describe("Write joined tables", {
   it("Write joined table for conejos (default)", {
     output_path <- "../data/joined_table.csv"
-    testtools::delete_output_file(output_path)
+    testtools::if_exist_remove(output_path)
     id_start <- 678
     write_transect_and_coordinates_table(output_path, id_start, transect_path, coordinates_path)
     expect_true(testtools::exist_output_file(output_path))
   })
   it("Write joined table for Tecolotes", {
     output_path <- "../data/joined_tecolote_table.csv"
-    testtools::delete_output_file(output_path)
+    testtools::if_exist_remove(output_path)
     id_start <- 678
     species <- "Tecolotes"
     write_transect_and_coordinates_table(output_path, id_start, transect_path_tecolotes, coordinates_path_tecolotes, species)
@@ -25,7 +25,7 @@ describe("Write joined tables", {
     coordinates_path_aves <- "../data/transectos_isla_clarion.csv"
     transect_path_aves <- "../data/aves_2022.csv"
     output_path <- "../data/joined_aves_table.csv"
-    testtools::delete_output_file(output_path)
+    testtools::if_exist_remove(output_path)
     id_start <- 679
     species <- "Aves"
     write_transect_and_coordinates_table(output_path, id_start, transect_path_aves, coordinates_path_aves, species)
